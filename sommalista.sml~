@@ -1,0 +1,16 @@
+datatype error = err
+
+val  sommalista = fn [] => err
+       		      |x::xs => 
+				let
+					val rec valore = fn [] => 0
+							 |x::xs => x + valore xs
+
+				in
+					valore (x::xs)
+
+				end;
+
+		 
+		
+			    

@@ -1,0 +1,14 @@
+datatype Expr =  X 
+                |Y  
+		|Avg of Expr * Expr
+		|Mul of Expr * Expr
+
+
+val rec compute = fn z:Expr => fn x:int => fn y:int => (
+
+							case z of 
+									 X  => x
+									|Y  => y
+									|Avg  (x,y) => x div y
+									|Mul  (x,y) => x * y)
+		   
